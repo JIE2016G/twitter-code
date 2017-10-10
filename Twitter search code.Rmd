@@ -9,20 +9,20 @@ output: html_document
 library(ROAuth)
 library(twitteR)
 
-api_key <- 
+api_key <- "VjPqL6gA48mxszeYaAbbT0rwv"
 
-api_secret <- 
+api_secret <- "0pRFO20QdTHVj8wcTQdvM1Yko4EStwVb8ej3jizsvyX91GN3xq"
 
-access_token <- 
+access_token <- "917749879203647488-QDKZwFTYlzg76Z1WohBgD49VRySqayt"
 
-access_token_secret <- 
+access_token_secret <- "XX8Gk5zq1yaQYEE9Sw9xMarnRUJ4VIImXmO7ufwjL9gqh"
 
 setup_twitter_oauth(api_key, api_secret, access_token, access_token_secret)
 ```
 
 #Download Tweets
 ```{r}
-TL <- searchTwitter("educational data mining", n=50, since='2017-10-01', until='2016-10-08')
+TL <- searchTwitter("educational data mining", n=50, since='2017-10-01', until='2017-10-08')
 TL <- do.call("rbind", lapply(TL, as.data.frame))
 ```
 
