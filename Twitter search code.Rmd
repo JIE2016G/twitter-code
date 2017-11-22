@@ -21,6 +21,7 @@ setup_twitter_oauth(api_key, api_secret, access_token, access_token_secret)
 ```
 
 #Download Tweets
+#'since' and 'until' could only have one week distance and it should be the recent one week
 ```{r}
 TL <- searchTwitter("educational data mining", n=50, since='2017-10-01', until='2017-10-08')
 TL <- do.call("rbind", lapply(TL, as.data.frame))
